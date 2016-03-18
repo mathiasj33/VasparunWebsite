@@ -1,0 +1,71 @@
+/* Background pattern from subtlepatterns.com */
+body, html {
+	background-image: url("/img/background.png");
+	font-family: Play;
+ 	padding-top: 30px; 
+}
+
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	border: none;
+	border-top: 10px solid rgb(8, 8, 8);
+}
+
+.navbar .navbar-inner .container {
+	color: #FFF;
+}
+
+.nav .active a {
+	border-bottom-right-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+}
+
+.jumbotron {
+	padding-bottom: 20em;
+}
+
+/* Background pattern from subtlepatterns.com */
+.background {
+	background: url(/img/Unbenannt.png) fixed;
+	background-position: 50% -240px;
+	color: #ffffff;
+}
+
+.panel {
+	background-color: #404040;
+	color: white;
+	border: none;
+	max-width: 500px;
+}
+
+.panel:hover {
+	box-shadow: 0px 0px 10px 4px rgba(255, 0, 0,1);
+}
+
+.panel-heading {
+	color: #fff !important;
+	background-color: #222222 !important;
+	padding: 25px;
+	border-bottom: 1px solid transparent;
+	border: none;
+}
+
+.panel-img {
+	width: 100%;
+}
+
+@media screen and (max-width : 768px) {
+	body, html {
+		margin: 0px !important;
+		padding-top: 25px;
+	}
+	.navbar {
+		border-top: none;
+		padding-top: 0px !important;
+	}
+	.nav .active a {
+		border-radius: 0px !important;
+	}
+}

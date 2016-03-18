@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="/html/style.css" type="text/css" rel="stylesheet">
+<title>Vasparun</title>
+
+<!--  TODO: responsive!!! -->
+
+<script>
+	$(document).ready(equalizeHeight);
+	$(window).resize(equalizeHeight);
+
+	function equalizeHeight() {
+		var height = $("#highestPanel").height();
+		$("#panel2").height(height);
+		$("#panel3").height(height);
+	}
+</script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Vasparun</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">About me</a></li>
+					<li><a href="about.html">Legal notice</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="jumbotron text-center background">
+		<h1>Vasparun</h1>
+		<p>an enhanced-mobility platformer with jetpacks and wallrunning</p>
+	</div>
+	<div class="container-fluid background2">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="panel panel-default text-center center-block" id="highestPanel">
+					<div class="panel-heading">
+						<h1>Movement system</h1>
+					</div>
+					<img src="img/Title.png" alt="Vasparun" class="panel-img">
+					<div class="panel-body">Vasparun features a fully-fledged movement system with wallrunning and
+						jetpacks. You have to master it in order to move fast and efficiently through the maps and achieve new
+						highscores.</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-default text-center center-block" id="panel2">
+					<div class="panel-heading">
+						<h1>Planned features</h1>
+					</div>
+					<img src="img/Planned.png" alt="Vasparun" class="panel-img">
+					<div class="panel-body">Vasparun is currently in a pre-alpha state. The main gameplay mechanics are
+						implemented, but there is a lot more to come.</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="panel panel-default text-center center-block" id="panel3">
+					<div class="panel-heading">
+						<h1>Community integration</h1>
+					</div>
+					<img src="img/Blender.png" alt="Vasparun" class="panel-img">
+					<div class="panel-body">In Vasparun, you can easily create your own maps and share them with the
+						community. There will also be scoreboards for each map where you can compare yourself to other players.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
