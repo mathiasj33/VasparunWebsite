@@ -1,8 +1,9 @@
 /* Background pattern from subtlepatterns.com */
 body, html {
-	background-image: url("/img/background.png");
+	background-image: url("/img/footer_lodyas.png");
 	font-family: Play;
- 	padding-top: 30px; 
+ 	padding-top: 30px;
+ 	font-size: 12pt;
 }
 
 .navbar {
@@ -26,11 +27,35 @@ body, html {
 	padding-bottom: 20em;
 }
 
-/* Background pattern from subtlepatterns.com */
-.background {
-	background: url(/img/Unbenannt.png) fixed;
+.title {
+	background: url(/img/Title.png) fixed;
 	background-position: 50% -240px;
 	color: #ffffff;
+}
+
+.background1 {
+	background-image: url(/img/geometric.png);
+}
+
+.background2 {
+	background-image: url(/img/footer_lodyas.png);
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.max-width {
+	max-width: 800px;
+}
+
+.white-text {
+	color: #ffffff;
+}
+
+.section {
+	padding-top: 35px;
+	padding-bottom: 35px;
 }
 
 .panel {
@@ -56,6 +81,51 @@ body, html {
 	width: 100%;
 }
 
+.right {
+	float: right;
+	text-align: right;
+}
+
+.bigheader h1 {
+	font-size: 50pt;
+}
+
+.slideanim {
+	visibility:hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
 @media screen and (max-width : 768px) {
 	body, html {
 		margin: 0px !important;
@@ -67,5 +137,9 @@ body, html {
 	}
 	.nav .active a {
 		border-radius: 0px !important;
+	}
+	.right {
+		float: left;
+		text-align: left;
 	}
 }

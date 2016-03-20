@@ -8,16 +8,41 @@
 <link href="/html/style.css" type="text/css" rel="stylesheet">
 <title>Vasparun</title>
 
-<!--  TODO: responsive!!! -->
+<!--  TODO: responsive!!! Text fertig, footer, social networks reinmachen + indiedb, andere pages machen-->
 
 <script>
-	$(document).ready(equalizeHeight);
 	$(window).resize(equalizeHeight);
 
 	function equalizeHeight() {
 		var height = $("#highestPanel").height();
 		$("#panel2").height(height);
 		$("#panel3").height(height);
+	}
+
+	$(window).scroll(function() {
+		$(".slideanim").each(function() {
+			var pos = $(this).offset().top;
+
+			var scrolled = $(window).scrollTop();
+			if (pos < scrolled + 700) {
+				$(this).addClass("slide");
+			}
+		});
+	});
+	
+	$(document).ready(function() {
+		equalizeHeight();
+		scrollToOnClick($("#highestPanel"), $("#movementSection"));
+		scrollToOnClick($("#panel2"), $("#featuresSection"));
+		scrollToOnClick($("#panel3"), $("#communitySection"));
+	});
+	
+	function scrollToOnClick(click, target) {
+		click.on("click", function() {
+			$("html, body").animate({
+				scrollTop: target.offset().top - 100
+			}, 1500);
+		});
 	}
 </script>
 </head>
@@ -43,14 +68,14 @@
 			</div>
 		</div>
 	</nav>
-	<div class="jumbotron text-center background">
+	<div class="jumbotron text-center title">
 		<h1>Vasparun</h1>
 		<p>an enhanced-mobility platformer with jetpacks and wallrunning</p>
 	</div>
 	<div class="container-fluid background2">
 		<div class="row">
 			<div class="col-sm-4">
-				<div class="panel panel-default text-center center-block" id="highestPanel">
+				<div class="panel panel-default text-center center-block pointer" id="highestPanel">
 					<div class="panel-heading">
 						<h1>Movement system</h1>
 					</div>
@@ -61,7 +86,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<div class="panel panel-default text-center center-block" id="panel2">
+				<div class="panel panel-default text-center center-block pointer" id="panel2">
 					<div class="panel-heading">
 						<h1>Planned features</h1>
 					</div>
@@ -71,7 +96,7 @@
 				</div>
 			</div>
 			<div class="col-sm-4">
-				<div class="panel panel-default text-center center-block" id="panel3">
+				<div class="panel panel-default text-center center-block pointer" id="panel3">
 					<div class="panel-heading">
 						<h1>Community integration</h1>
 					</div>
@@ -80,6 +105,71 @@
 						community. There will also be scoreboards for each map where you can compare yourself to other players.</div>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid background1 section" id="movementSection">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="img/Title.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+			</div>
+			<div class="col-sm-6 white-text">
+				<div class="max-width">
+					<h1>Movement system</h1>
+					<p>The movement mechanics are the core system of the game. Using your jetpack and wallrunning
+						abilities intellegently is the only way to reach the end of the map and possibly set new highscores. In
+						most of the maps, there are shortcuts that you can use to further minimize the time you need to complete
+						the level.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid background2 section" id="featuresSection">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="max-width white-text right">
+					<h1>Planned features</h1>
+					<p>
+						Besides the core movement system which is already implemented there are a lot more features to come. I'm
+						currently working on "rails" that work similar to Sky-Lines in Bioshock: Infinite. You will be able to
+						jump from rail to rail and have to shoot walls while sliding on them. <br /> Other features to be
+						implemented include moving lasers that you have to avoid, "warp points" that you have to pull yourself
+						towards to while maintaining your momentum and much more.
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<img src="img/Planned.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid background1 section" id="communitySection">
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="img/Blender.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+			</div>
+			<div class="col-sm-6 white-text">
+				<div class="max-width">
+					<h1>Community integration</h1>
+					<p>
+						The community will play a big role in Vasparun. Firstly, the game will revolve around highscores and
+						best times. You will be able to compare yourself to other players all over the world and can try to
+						improve your ranking by mastering the movement system. <br /> Every member will be able to create own
+						maps and share them with the community that will then rank them. If you do not want your map to be
+						public, you can also decide to only share them with your friends.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid background2 section">
+		<div class="white-text text-center center-block max-width bigheader">
+			<h1>Release date</h1>
+			Vasparun is currently in a pre-alpha state and numerous important features are still missing. It is hard to
+			estimate the date of the final release at this point but it likely to happen in <b>Fall / Winter 2016.</b>
 		</div>
 	</div>
 </body>
