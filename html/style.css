@@ -1,9 +1,13 @@
-/* Background pattern from subtlepatterns.com */
+/* Background patterns from subtlepatterns.com */
 body, html {
 	background-image: url("/img/footer_lodyas.png");
 	font-family: Play;
- 	padding-top: 30px;
- 	font-size: 12pt;
+	padding-top: 30px;
+	font-size: 12pt;
+}
+
+.navbar a {
+	outline: 0;
 }
 
 .navbar {
@@ -23,12 +27,41 @@ body, html {
 	border-bottom-left-radius: 20px !important;
 }
 
+.open .dropdown-toggle {
+    background-color: #111111 !important;
+    border-bottom-right-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+}
+
+.inverse-dropdown {
+  background-color: #222;
+  border: none;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+.inverse-dropdown a {
+	color: #999 !important;
+}
+
+.inverse-dropdown a:hover {
+	color: #ffffff !important;
+    background-color: #000000 !important;
+}
+
+.inverse-dropdown a:focus {
+	color: #ffffff !important;
+    background-color: #000000 !important;
+}
+
 .jumbotron {
 	padding-bottom: 20em;
 }
 
 .title {
-	background: url(/img/Title.png) fixed;
+	background: url(/img/Title.jpg) fixed;
 	background-position: 50% -240px;
 	color: #ffffff;
 }
@@ -49,6 +82,10 @@ body, html {
 	max-width: 800px;
 }
 
+.top-offset {
+	margin-top: 20%;
+}
+
 .white-text {
 	color: #ffffff;
 }
@@ -66,7 +103,7 @@ body, html {
 }
 
 .panel:hover {
-	box-shadow: 0px 0px 10px 4px rgba(255, 0, 0,1);
+	box-shadow: 0px 0px 10px 4px rgba(255, 0, 0, 1);
 }
 
 .panel-heading {
@@ -91,17 +128,21 @@ body, html {
 }
 
 .slideanim {
-	visibility:hidden;
+	visibility: hidden;
 }
 
 .slide {
-    animation-name: slide;
-    -webkit-animation-name: slide;
-    
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-    
-    visibility: visible;
+	animation-name: slide;
+	-webkit-animation-name: slide;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	visibility: visible;
+}
+
+.video-max-size {
+	max-width: 800px;
+	max-height: 600px;
+	margin: 0 auto;
 }
 
 @keyframes slide {

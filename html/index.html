@@ -8,7 +8,7 @@
 <link href="/html/style.css" type="text/css" rel="stylesheet">
 <title>Vasparun</title>
 
-<!--  TODO: responsive!!! Text fertig, footer mit social, social networks reinmachen + indiedb, andere pages machen; images downscalen!!!-->
+<!--  TODO: Text fertig, simon, auf handy ausprobieren, veröffentlichen(bplaced oder hoster), twittern + social media website ändern nicht mehr indiedb seite -->
 
 <script>
 	$(window).resize(equalizeHeight);
@@ -24,23 +24,23 @@
 			var pos = $(this).offset().top;
 
 			var scrolled = $(window).scrollTop();
-			if (pos < scrolled + 700) {
+			if (pos < scrolled + 700 && !$(this).hasClass("slide")) {
 				$(this).addClass("slide");
 			}
 		});
 	});
-	
+
 	$(document).ready(function() {
 		equalizeHeight();
 		scrollToOnClick($("#highestPanel"), $("#movementSection"));
 		scrollToOnClick($("#panel2"), $("#featuresSection"));
 		scrollToOnClick($("#panel3"), $("#communitySection"));
 	});
-	
+
 	function scrollToOnClick(click, target) {
 		click.on("click", function() {
 			$("html, body").animate({
-				scrollTop: target.offset().top - 100
+				scrollTop : target.offset().top - 100
 			}, 1500);
 		});
 	}
@@ -60,9 +60,33 @@
 
 			<div class="collapse navbar-collapse" id="navbar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Gallery</a></li>
-					<li><a href="legalDisclosure.html">Legal disclosure</a></li>
+					<li class="active">
+						<a href="#">Home</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Social media <span class="caret"></span></a>
+						<ul class="dropdown-menu inverse-dropdown">
+							<li>
+								<a href="http://www.indiedb.com/games/vasparun" target="_blank"> <img
+										src="http://media.indiedb.com/images/global/indiedb.jpg" width="39px" height="41px" alt="Vasparun" />&nbsp
+									&nbspIndieDB
+								</a>
+							</li>
+							<li>
+								<a href="http://www.twitter.com/vasparun" target="_blank"> <img src="img/twitter.jpg"
+										alt="Vasparun" width="42px" height="44px" />&nbsp &nbspTwitter
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/vasparun/" target="_blank"> <img src="img/facebook.jpg"
+										alt="Vasparun" width="39px" height="41px" />&nbsp &nbspFacebook
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="legalDisclosure.html">Legal disclosure</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -78,7 +102,7 @@
 					<div class="panel-heading">
 						<h1>Movement system</h1>
 					</div>
-					<img src="img/Title.png" alt="Vasparun" class="panel-img">
+					<img src="img/Title.jpg" alt="Vasparun" class="panel-img">
 					<div class="panel-body">Vasparun features a fully-fledged movement system with wallrunning and
 						jetpacks. You have to master it in order to move fast and efficiently through the maps and achieve new
 						highscores.</div>
@@ -89,7 +113,7 @@
 					<div class="panel-heading">
 						<h1>Planned features</h1>
 					</div>
-					<img src="img/features.png" alt="Vasparun" class="panel-img">
+					<img src="img/features.jpg" alt="Vasparun" class="panel-img">
 					<div class="panel-body">Vasparun is currently in a pre-alpha state. The main gameplay mechanics are
 						implemented, but there is a lot more to come.</div>
 				</div>
@@ -99,8 +123,9 @@
 					<div class="panel-heading">
 						<h1>Community integration</h1>
 					</div>
-					<img src="img/timer.png" alt="Vasparun" class="panel-img">
-					<div class="panel-body">In Vasparun, you will be able to compare yourself to other players all over the world.</div>
+					<img src="img/timer.jpg" alt="Vasparun" class="panel-img">
+					<div class="panel-body">In Vasparun, you will be able to compare yourself to other players all over
+						the world.</div>
 				</div>
 			</div>
 		</div>
@@ -109,7 +134,7 @@
 	<div class="container-fluid background1 section" id="movementSection">
 		<div class="row">
 			<div class="col-sm-6">
-				<img src="img/Title.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+				<img src="img/Title.jpg" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
 			</div>
 			<div class="col-sm-6 white-text">
 				<div class="max-width">
@@ -130,15 +155,14 @@
 					<h1>Planned features</h1>
 					<p>
 						Besides the core movement system which is already implemented there are a lot more features to come. I'm
-						currently working on "warp points" which are spots to which you can pull yourself towards while 
-						maintaining your momentum.
-						<br /> 
-						Other features to be implemented include moving lasers that you have to avoid, powerups and much more.
+						currently working on "warp points" which are spots to which you can pull yourself towards while
+						maintaining your momentum. <br /> Other features to be implemented include moving lasers that you have
+						to avoid, powerups and much more.
 					</p>
 				</div>
 			</div>
 			<div class="col-sm-6">
-				<img src="img/features.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+				<img src="img/features.jpg" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
 			</div>
 		</div>
 	</div>
@@ -146,16 +170,14 @@
 	<div class="container-fluid background1 section" id="communitySection">
 		<div class="row">
 			<div class="col-sm-6">
-				<img src="img/timer.png" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
+				<img src="img/timer.jpg" alt="Vasparun" class="panel-img img-rounded max-width center-block slideanim">
 			</div>
 			<div class="col-sm-6 white-text">
 				<div class="max-width">
 					<h1>Community integration</h1>
-					<p>
-						The community will play a big role in Vasparun. The game will revolve around highscores and
-						best times. You will be able to compare yourself to other players all over the world and can try to
-						improve your ranking by mastering the movement system.
-					</p>
+					<p>The community will play a big role in Vasparun. The game will revolve around highscores and best
+						times. You will be able to compare yourself to other players all over the world and can try to improve
+						your ranking by mastering the movement system.</p>
 				</div>
 			</div>
 		</div>
@@ -163,9 +185,22 @@
 
 	<div class="container-fluid background2 section">
 		<div class="white-text text-center center-block max-width bigheader">
+			<h1>Pre-alpha video footage</h1>
+			<br />
+		</div>
+		<div class="video-max-size">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe src="https://www.youtube.com/embed/aUqKBoy0bw8?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid background1 section">
+		<div class="white-text text-center center-block max-width bigheader">
 			<h1>Release date</h1>
 			Vasparun is currently in a pre-alpha state and numerous important features are still missing. It is hard to
-			estimate the date of the final release at this point but it likely to happen in <b>Fall / Winter 2016.</b>
+			estimate the date of the final release at this point but it is likely to happen in <b>Fall / Winter
+				2016.</b>
 		</div>
 	</div>
 </body>
