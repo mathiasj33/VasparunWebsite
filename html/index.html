@@ -7,6 +7,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <link href="/html/style.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet"> 
+
 <title>Vasparun</title>
 
 <script>
@@ -29,7 +31,7 @@
 		});
 	});
 
-	$(document).ready(function() {
+	$(window).load(function() {
 		equalizeHeight();
 		scrollToOnClick($("#highestPanel"), $("#movementSection"));
 		scrollToOnClick($("#panel2"), $("#featuresSection"));
@@ -141,7 +143,11 @@
 					<p>The movement mechanics are the core system of the game. Using your jetpack and wallrunning
 						abilities intellegently is the only way to reach the end of the map and possibly set new highscores. On
 						most of the maps, there are shortcuts that you can use to further minimize the time you need to complete
-						the level.</p>
+						the level.
+						<br>
+						In the infinite running mode your speed does not matter but you only have one try to reach the furthest distance
+						before having to start all over again.
+						</p>
 				</div>
 			</div>
 		</div>
@@ -153,10 +159,9 @@
 				<div class="max-width white-text right">
 					<h1>Planned features</h1>
 					<p>
-						Besides the core movement system which is already implemented there are a lot more features to come. I'm
-						currently working on "warp points" which are spots that you can pull yourself to while
-						maintaining your momentum. <br /> Other features to be implemented include moving lasers that you have
-						to avoid, powerups and much more.
+						The development of Vasparun is nearing its end. I am currently creating more content for the game
+						as that is the main thing that is lacking right now. There are also small features I will be adding to
+						spice the gameplay up some more.<br>
 					</p>
 				</div>
 			</div>
@@ -197,9 +202,8 @@
 	<div class="container-fluid background1 section">
 		<div class="white-text text-center center-block max-width bigheader">
 			<h1>Release date</h1>
-			Vasparun is currently in a pre-alpha state and numerous important features are still missing. It is hard to
-			estimate the date of the final release at this point but it is likely to happen in <b>Fall / Winter
-				2016.</b>
+			Vasparun is already in an advanced state but it is still hard to estimate the date of the final release.
+			However, it is likely to happen in <b>Fall / Winter 2016.</b>
 		</div>
 	</div>
 	
